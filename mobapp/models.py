@@ -38,7 +38,7 @@ class pro_brand_map(models.Model):
 
 class Pro_models(models.Model):
     mapid = models.ForeignKey('pro_brand_map')
-    mod_name = models.CharField(ma_length = 50)
+    mod_name = models.CharField(max_length = 50)
     display = models.FloatField()
     processor = models.FloatField()
     ram = models.FloatField()
@@ -49,8 +49,8 @@ class Pro_models(models.Model):
     
 class Rating(models.Model):
     uid = models.ForeignKey('Profile')
-     pro_mod_id = models.ForeignKey('Pro_models')
-     rate = models.FloatField()
+    pro_mod_id = models.ForeignKey('Pro_models')
+    rate = models.FloatField()
      
 class booking(models.Model):
     uid = models.ForeignKey('Profile')
